@@ -1,10 +1,10 @@
-
 ## viewImage()
 <hr>
 
 The `viewImage` function is used to generate HTML markup for displaying images based on the provided image paths. It accepts two parameters:
- 
+
 ##### Params
+
  - `$imagePaths`: The path or paths of the images to be displayed. If multiple paths are provided, they should be separated by the pipe character (|).
  - `$attributes` (optional): An array of additional attributes to customize the image display.
 
@@ -35,10 +35,10 @@ $attributes['single'] = false;
 ## imageGallery()
 <hr>
 Display all Image of an album Gallery Layouts. (Theme Function)
- 
+
  ##### Params
  - `$galleryObjectData`: Gallery Object Data.
- 
+
 ##### Example Usage
 ```
 {! imageGallery($galleryObjectData) !}
@@ -48,10 +48,10 @@ Display all Image of an album Gallery Layouts. (Theme Function)
 ## galleryAlbum()
 <hr>
 Display All Image Album. (Theme Function)
- 
+
 ##### Params
  - `$galleryNum`: (optional) Gallery Object Data.
- 
+
 ##### Example Usage
 ```
 {! galleryAlbum($galleryNum) !}
@@ -59,12 +59,12 @@ Display All Image Album. (Theme Function)
 ```
 ## videosGallery()
 <hr>
- 
+
 Display All Videos of an Album. (Theme Function)
- 
+
 ##### Params
  - `$galleryObjectData`: Video Gallery Object Data.
- 
+
 ##### Example Usage
 ```
 {! videosGallery($galleryObjectData) !}

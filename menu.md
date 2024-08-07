@@ -73,11 +73,11 @@
 ## 3. showSideMenu()
 <hr>
  - This is used to generate a sidebar menu based on the provided menu data. It accepts two 
- 
+
  ##### Parameters
  - `$menus`: An array containing the menu items to be displayed.
  - `$dropdown` (optional): A boolean flag indicating whether to display submenus as
- 
+
  ##### Example Usage
  ```
    // Display the sidebar menu
