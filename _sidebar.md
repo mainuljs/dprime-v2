@@ -1,8 +1,10 @@
-  - [Home](#digitalbit)
+  - [Home](README.md)
   - [Documentation](Documentation.md)
-  - [Helper Functions](commonfunctions.md)
-  - [Menu](theme-functions.md#menu)
+  - [Menu](menu.md#)
+  - [Image & Gallery](image.md)
   - [Sliders](sliders.md)
+  - [Team Member](team.md)
+  - [Theme](theme.md)
   - [Authentication](authentication.md)
   - [API data](data.md)
 
