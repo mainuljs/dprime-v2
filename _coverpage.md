@@ -4,14 +4,14 @@
 
 <small>1.0.1</small>
 
-> Content Management System
+> DigitalBit - CMS
 
 - Simple and lightweight
 - No statically built html files
 - Multiple themes
 
-[GitHub](https://misratjannat.github.io/TOS-Documentation/)
-[Get Started](#tos)
+[GitHub](https://github.com/mainuljs/dprime-v2)
+[Get Started](#digitalbit)
 
 
 <!-- ![](_media/banner.jpg) -->
