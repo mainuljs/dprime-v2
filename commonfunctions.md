@@ -1,3 +1,26 @@
+### text_num( $text, $length) 
+ * $text {string} - Full text.
+ * $length {integer} - Expected length of the return text.
+ * Return: string
+
+Return text from begining to specified length.
+
+```php
+  text_num('this is full-text', 2);  // this
+``` 
+
+### home() 
+ * Return: boolean
+
+return true if it is system root .
+  
+```php
+  // https://domain.com/
+  home(); 
+  // true;
+``` 
+
+
 
 ### clean_url( $str, $separator, $lowercase ) 
  * $str {string} - string to clean for the url
@@ -8,18 +31,6 @@ Return url-friendly string. Bengali suported.
 
 ```php
   clean_url('clean url friendly string');  // clean-url-friendly-string 
-``` 
-
-
-### text_num( $text, $length) 
- * $text {string} - Full text.
- * $length {integer} - Expected length of the return text.
- * Return: string
-
-Return text from begining to specified length.
-
-```php
-  text_num('this is full-text', 2);  // this
 ``` 
  
 
@@ -35,17 +46,3 @@ Returns the specified uri segment.
   echo segment(1, '', '/'); // abc/
   
 ``` 
-
-
-### home() 
- * Return: boolean
-
-return true if it is system root .
-  
-```php
-  // https://domain.com/
-  home(); 
-  // true;
-``` 
-
-  
