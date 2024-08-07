@@ -1,7 +1,7 @@
 # Digitalbit
 
 
-| **Laravel** | **Digitalbit** |
+| **Laravel** | **DigitalBit** |
 |-------------|---------------------|
 | 10.0        | 1.0.0                |
 
