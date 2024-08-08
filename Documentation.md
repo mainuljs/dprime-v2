@@ -50,8 +50,6 @@
   
     ```
   
-## Content Service Functions
-
 ### homeContent()
 <hr>
 
@@ -68,25 +66,3 @@ This function returns a collection of `HomeItem` models where the `h_status` fie
  @endforeach
 
 ```
-
-### recentArticles() 
-<hr>
-
-The `recentArticles()` function retrieves the specified number of recent published articles with the categories relationship from the database. It uses the Laravel Eloquent ORM to make the database query.
-
-##### Function Parameters 
-- `$articleNum` : (optional) - The number of recent articles to retrieve. It defaults to 10 if not specified.
-
-##### Return Value
-The function returns a collection of model instances containing the retrieved articles and their associated categories.
-
-##### Example Usage
-```
- @foreach(Content::recentArticles(4) as $item)
-    ....
- @endforeach
-
-```
-<hr>
-
-
