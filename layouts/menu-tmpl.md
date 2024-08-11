@@ -1,41 +1,127 @@
-### Top Header
+
+### Menu Layouts
+
 <hr>
 
+### Menu Bar
+
+<hr>
+
+#####
+
 ```html
-<!-- top header -->
-<section class="container-fluid top-header-two">
-	<div class="container">
-		<div class="row">
-			<div class="col-4 col-md-3 head-icon">
-				<a href="#"><span class="fa fa-facebook"> </span> </a>
-				<a href="#"><span class="fa fa-twitter"> </span> </a>
-				<a href="#"><span class="fa fa-linkedin"> </span> </a>
-			</div>
-		    <div class="col-8 col-md-9 last pl-0">
-				<span class="fa fa-phone"></span><a class="" href="tel:2123865575"> 212 386 5575</a>&nbsp;&nbsp;&nbsp;
-				<span class="fa fa-envelope"> </span> admin@email.com
-			</div>
-		</div>
-	</div>
-</section>
-<!-- end: top header --->
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">  
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+		 @php
+            $attributes = [
+              'navAttr'          => 'class="navbar-nav ml-auto"', //<ul class="navbar-nav"> 
+			  'subNavAttr'       => 'class="nav-item dropdown"', //<li class="nav-item dropdown">
+			  'itemAttr'		 => 'class="nav-item"', //<li class="nav-item">
+			  'itemLinkAttr'     => 'class="nav-link"', // <a class="nav-link">
+			  'drowDownAttr'     => 'class="dropdown-menu"', //<ul class="dropdown-menu">
+			  'dropDownLinkAttr' => 'class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"', //<a class="class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"">
+			  'activeItemAttr'   => 'class="active"',
+            ];
+          @endphp
+		  
+          {!! showMainMenu($menus, $attributes) !!}
+	  
+	 
+    </div>
+  </div>
+</nav>
+
 ```
 
-<hr>
 
-### Main Menu
+```html
+
+```
+
+
+
+##### Navbar - Full Menu Bar
+
+ - With logo, main menu, responsive menu, action button
+
 <hr>
 
 ```html
-<!-- main menu -->
-<div class="col col-md-9 menu-col">		  		 
-    <nav class="navbar navbar-expand main-menu">				  
-	    <div class="collapse navbar-collapse justify-content-end top-nav">		
-			<?php
-				showMainMenu($menuArray, array('submenu'=>FALSE), segment(1));
-			?>
-	    </div>																
-    </nav>
-</div>
-<!-- end: main menu-->
+<nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+             <div class="container flex-lg-row flex-nowrap align-items-center">			 
+			 
+                 <div class="navbar-brand w-100">
+                     <a href="{{url('/')}}">
+                         <img height="60" src="{{$logo}}" srcset="{{$logo}}" alt="{{$appName}}" />
+                     </a>
+                 </div>
+				 
+				 
+                 <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+				 
+                     <div class="offcanvas-header d-lg-none">
+                         <img height="78" class="mb-4" src="{{$logo}}" srcset="{{$logo}}" alt="{{$appName}}" />
+                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                     </div>
+					 
+					 
+                     <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                     @php
+                         $attributes = [
+                             'subNavAttr'        => 'class="dropdown-menu"',
+                             'dropDownLiA'      => 'class="dropdown-item"'
+                         ];
+                     @endphp
+                     {!! showMainMenu($menus, $attributes) !!}					 
+
+                     <!-- /.navbar-nav -->
+					 
+					 
+                         <div class="offcanvas-footer d-lg-none">
+                             <div>
+                                 @php
+                                     $allEmails = explode(',', $email);
+                                     $socialMedia = json_decode($social, true);
+                                 @endphp
+                                 <a href="mailto:{{$allEmails[0]}}" class="link-inverse">{{$allEmails[0]}}</a>
+                                 <br /> {{$contact}} <br />
+                                 <nav class="nav social social-white mt-4">
+                                     @if(!empty($socialMedia))
+                                         @foreach($socialMedia as $key=>$sMedia)
+                                             @php
+                                                 $sIcon = strtolower($sMedia['network_name']);
+                                                 if ($sIcon =='facebook'){
+                                                   $sIcon = $sIcon.'-f';
+                                                 }
+                                             @endphp
+                                             <a href="{{$sMedia['network_link']}}"><i class="uil uil-{{$sIcon}}"></i></a>
+                                         @endforeach
+                                     @endif
+                                 </nav>
+                                 <!-- /.social -->
+                             </div>
+                         </div>
+                         <!-- /.offcanvas-footer -->
+                     </div>
+                     <!-- /.offcanvas-body -->
+                 </div>
+
+
+                 <div class="navbar-other w-100 d-flex ms-auto">
+                     <ul class="navbar-nav flex-row align-items-center ms-auto">
+                         <li class="nav-item d-none d-md-block">
+                             <a href="{{url('/contact')}}" class="btn btn-sm btn-primary rounded-pill">Book A Trip</a>
+                         </li>
+                         <li class="nav-item d-lg-none">
+                             <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                         </li>
+                     </ul>
+                         <!-- /.navbar-nav -->
+                 </div>
+             </div>
+             <!-- /.container -->
+         </nav>
 ```

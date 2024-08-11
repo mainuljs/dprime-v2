@@ -1,4 +1,5 @@
 ### Team layout
+<hr>
 
 ```php
 
@@ -77,6 +78,8 @@ function team($catAlias='', $teamNum=''){
 ```
 <hr>
 
+##### Wrapper
+
 ```html
 <section class="bg-light py-3 py-md-5 py-xl-8">
     <div class="container">
@@ -95,4 +98,4 @@ function team($catAlias='', $teamNum=''){
     </div>
 </section>
 
-```html
+```
