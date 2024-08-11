@@ -22,7 +22,6 @@ return true if it is system root .
   // true;
 ``` 
 
-
 ### 5. contentUtility()
   <hr>
 
@@ -34,7 +33,6 @@ The `contentUtility` function is a utility function that generates HTML markup f
  {! contentUtility()!}
    
    ```
-  
  
 ### 6. share()
 <hr>
